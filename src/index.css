@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Custom premium scrollbar */
+    scrollbar-color: #B08D57 #F8F5F0;
+    scrollbar-width: thin;
+  }
+
+  /* Custom scrollbar for Webkit browsers */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #F8F5F0; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #B08D57; 
+    border-radius: 0px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6B2334; 
+  }
+
+  body {
+    background-color: #FCF9F8;
+    color: #1C1B1B;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Lora, serif;
+    letter-spacing: 0.02em;
+  }
+
+  button, input, select, textarea {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Minimalist underline inputs */
+  .input-underline {
+    @apply bg-transparent border-b border-dark-surface/20 py-2 px-1 focus:border-primary focus:outline-none transition-colors duration-300 w-full placeholder:text-dark-surface/40;
+  }
+  
+  /* Serif headlines */
+  .serif-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Sans-serif functional body */
+  .sans-body {
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  /* Wide caps label */
+  .label-caps {
+    @apply font-sans text-[11px] font-semibold uppercase tracking-caps text-dark-surface/60;
+  }
+  
+  /* Editorial hover effect on image */
+  .image-zoom-hover {
+    @apply overflow-hidden;
+  }
+  
+  .image-zoom-hover img {
+    @apply transition-transform duration-700 ease-in-out;
+  }
+  
+  .image-zoom-hover:hover img {
+    @apply scale-105;
+  }
+}
+
+/* Page transitions / loading effect simulation */
+.page-fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
