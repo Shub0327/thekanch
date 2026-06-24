@@ -75,9 +75,16 @@ export default function ProductDetail() {
     'S-Hook Clasp'
   ];
 
-  // Related products (same type or vendor, excluding self, limit 4)
+  // Related products: filter by sharing at least one tag or same type, sorted by number of shared tags (excluding self, limit 4)
   const relatedProducts = productsData
-    .filter(p => p.id !== product.id && p.type === product.type)
+    .filter(p => p.id !== product.id)
+    .map(p => {
+      // Calculate score based on shared tags
+      const sharedTags = p.tags.filter(t => product.tags.includes(t)).length;
+      return { p, score: sharedTags };
+    })
+    .sort((a, b) => b.score - a.score)
+    .map(item => item.p)
     .slice(0, 4);
 
   // WhatsApp checkout details
