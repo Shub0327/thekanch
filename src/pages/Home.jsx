@@ -20,13 +20,13 @@ export default function Home() {
     {
       name: 'Fine Moissanite',
       desc: 'Brilliant moissanite diamonds reflecting modern luxury.',
-      image: 'https://miranajewels.com/cdn/shop/files/MJNK23N1246-2.jpg?v=1736417748',
+      image: 'https://miranajewels.com/cdn/shop/files/IMG-2106.jpg?v=1782036393',
       link: '/collection?category=Moissanite',
     },
     {
       name: 'Polki & Victorian',
       desc: 'Rich antique finish and polki stones for the timeless bride.',
-      image: 'https://miranajewels.com/cdn/shop/files/MJNK21N341-2.jpg?v=1738734289',
+      image: 'https://miranajewels.com/cdn/shop/files/IMG_2145.jpg?v=1782120212',
       link: '/collection?category=Polki',
     },
   ];
