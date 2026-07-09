@@ -59,7 +59,7 @@ export default function About() {
       </section>
 
       {/* 3. Craftsmanship Section */}
-      <section id="craftsmanship" className="bg-[#FAF8F5] border-y border-sandstone/25 py-[120px]">
+      <section id="craftsmanship" className="bg-secondary border-y border-sandstone/25 py-[120px]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-[80px]">
           
           <div className="text-center mb-[80px]">

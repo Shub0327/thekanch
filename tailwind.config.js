@@ -8,24 +8,24 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#B08D57', // Antique Gold
-          dark: '#967645',
+          DEFAULT: '#D4AF37', // Royal Gold
+          dark: '#AA8C2C',
         },
         secondary: {
-          DEFAULT: '#F8F5F0', // Ivory Base
+          DEFAULT: '#1C1514', // Elevated dark mahogany for cards
         },
-        canvas: '#FCF9F8', // Main Page Background
-        sandstone: '#D9C7B3', // Tertiary Sandstone
+        canvas: '#120E0D', // Deep midnight mahogany / onyx
+        sandstone: '#332624', // Subtle bronze/brown border
         emerald: {
-          DEFAULT: '#2F5D50',
-          light: '#3C7061',
+          DEFAULT: '#153A2D', // Deep royal emerald
+          light: '#235946',
         },
         wine: {
-          DEFAULT: '#6B2334',
-          light: '#802D40',
+          DEFAULT: '#8B1C31', // Ruby Crimson for badges
+          light: '#A4233C',
         },
-        'dark-surface': '#1C1B1B',
-        'surface-dim': '#DCD9D9',
+        'dark-surface': '#FDFBF7', // Pearl Ivory for primary text
+        'surface-dim': '#B3ACA2', // Muted gold-grey for secondary text
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Lora', 'serif'],

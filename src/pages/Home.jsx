@@ -169,7 +169,7 @@ export default function Home() {
       </section>
 
       {/* 5. Trust Badges */}
-      <section className="bg-[#FAF8F5] border-t border-sandstone/20 py-16">
+      <section className="bg-secondary border-t border-sandstone/20 py-16">
         <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] grid grid-cols-1 md:grid-cols-4 gap-8">
           
           <div className="flex flex-col items-center text-center p-4">
