@@ -39,10 +39,10 @@ export default function Collection() {
   const categoriesList = ['Kundan', 'Moissanite', 'Polki'];
   const platingsList = ['Antique Gold', 'Victorian', 'Gold Plated'];
   const priceRanges = [
-    { label: 'Under ₹5,000', value: 'under-5000', min: 0, max: 5000 },
-    { label: '₹5,000 – ₹10,000', value: '5000-10000', min: 5000, max: 10000 },
-    { label: '₹10,000 – ₹15,000', value: '10000-15000', min: 10000, max: 15000 },
-    { label: 'Over ₹15,000', value: 'over-15000', min: 15000, max: 999999 }
+    { label: 'Under ₹3,000', value: 'under-3000', min: 0, max: 3000 },
+    { label: '₹3,000 – ₹3,500', value: '3000-3500', min: 3000, max: 3500 },
+    { label: '₹3,500 – ₹4,000', value: '3500-4000', min: 3500, max: 4000 },
+    { label: 'Over ₹4,000', value: 'over-4000', min: 4000, max: 999999 }
   ];
 
   // Processed Products
