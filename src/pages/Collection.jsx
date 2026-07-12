@@ -112,13 +112,13 @@ export default function Collection() {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] py-[60px] page-fade-in text-left">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] py-8 md:py-[60px] page-fade-in text-left">
       
       {/* Editorial Page Header */}
-      <div className="border-b border-sandstone/25 pb-8 mb-12 flex flex-col md:flex-row items-baseline justify-between">
+      <div className="border-b border-sandstone/25 pb-6 md:pb-8 mb-6 md:mb-12 flex flex-col md:flex-row items-baseline justify-between">
         <div>
           <span className="label-caps mb-2 block text-primary">The Vault</span>
-          <h2 className="font-serif text-3xl md:text-5xl text-dark-surface font-normal">
+          <h2 className="font-serif text-2xl md:text-5xl text-dark-surface font-normal">
             {isWishlistOnly ? 'My Curated Wishlist' : 'The Necklaces Collection'}
           </h2>
           <p className="font-sans text-xs text-dark-surface/50 mt-2">
@@ -260,7 +260,7 @@ export default function Collection() {
             </div>
           ) : (
             <div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 md:gap-8">
                 {paginatedProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
                 ))}

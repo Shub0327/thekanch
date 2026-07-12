@@ -9,23 +9,23 @@ export default {
       colors: {
         primary: {
           DEFAULT: '#D4AF37', // Royal Gold
-          dark: '#AA8C2C',
+          dark: '#BCA040',    // Antique Gold
         },
         secondary: {
-          DEFAULT: '#1C1514', // Elevated dark mahogany for cards
+          DEFAULT: '#F5ECE1', // Muted Cream Champagne
         },
-        canvas: '#120E0D', // Deep midnight mahogany / onyx
-        sandstone: '#332624', // Subtle bronze/brown border
+        canvas: '#FCF9F5',    // Warm Alabaster Beige
+        sandstone: '#E5D9C8', // Champagne Bronze
         emerald: {
           DEFAULT: '#153A2D', // Deep royal emerald
           light: '#235946',
         },
         wine: {
-          DEFAULT: '#8B1C31', // Ruby Crimson for badges
-          light: '#A4233C',
+          DEFAULT: '#B35B6D', // Royal Velvet Rose
+          light: '#DCA4B0',   // Soft Blush Pink
         },
-        'dark-surface': '#FDFBF7', // Pearl Ivory for primary text
-        'surface-dim': '#B3ACA2', // Muted gold-grey for secondary text
+        'dark-surface': '#221614', // Deep Espresso/Mahogany primary text
+        'surface-dim': '#7A6A66',   // Warm Rose-taupe muted text
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'Lora', 'serif'],

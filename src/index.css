@@ -9,7 +9,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     /* Custom premium scrollbar */
-    scrollbar-color: #D4AF37 #120E0D;
+    scrollbar-color: #D4AF37 #F5ECE1;
     scrollbar-width: thin;
   }
 
@@ -20,7 +20,7 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: #120E0D; 
+    background: #F5ECE1; 
   }
    
   ::-webkit-scrollbar-thumb {
@@ -29,12 +29,12 @@
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #6B2334; 
+    background: #B35B6D; 
   }
 
   body {
-    background-color: #120E0D;
-    color: #FDFBF7;
+    background-color: #FCF9F5;
+    color: #221614;
   }
 
   h1, h2, h3, h4, h5, h6 {

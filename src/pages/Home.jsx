@@ -35,7 +35,7 @@ export default function Home() {
     <div className="page-fade-in bg-canvas flex flex-col">
       
       {/* 1. Hero Banner */}
-      <section className="relative h-[90vh] bg-secondary flex items-center overflow-hidden border-b border-sandstone/25">
+      <section className="relative h-[70vh] md:h-[90vh] bg-secondary flex items-center overflow-hidden border-b border-sandstone/25">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -49,10 +49,10 @@ export default function Home() {
         {/* Hero Content */}
         <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] w-full relative z-10 text-left">
           <span className="label-caps mb-4 block text-primary tracking-[0.25em]">The Kanch Autumn Editorial</span>
-          <h2 className="font-serif text-5xl md:text-7xl font-normal text-dark-surface tracking-tightest leading-[1.1] max-w-2xl mb-6">
+          <h2 className="font-serif text-3xl sm:text-5xl md:text-7xl font-normal text-dark-surface tracking-tightest leading-[1.1] max-w-2xl mb-4 md:mb-6">
             The Modern Heirloom.
           </h2>
-          <p className="font-sans text-base md:text-lg text-dark-surface/75 max-w-md mb-12 leading-relaxed">
+          <p className="font-sans text-sm md:text-lg text-dark-surface/75 max-w-md mb-8 md:mb-12 leading-relaxed">
             Archival Indian craftsmanship, refined through the stark, sophisticated lens of high-fashion editorial. Handcrafted necklaces built to bear witness to your legacy.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
@@ -73,14 +73,14 @@ export default function Home() {
       </section>
 
       {/* 2. Featured Categories Grid */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-[80px] py-[120px]">
-        <div className="text-center mb-[60px]">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] py-16 md:py-[120px]">
+        <div className="text-center mb-8 md:mb-[60px]">
           <span className="label-caps mb-3 block text-primary">Curated Directives</span>
           <h2 className="font-serif text-3xl md:text-4xl text-dark-surface">Browse by Atelier Category</h2>
           <div className="h-px bg-sandstone/30 w-16 mx-auto mt-4" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {categories.map((cat, idx) => (
             <div key={idx} className="group relative bg-secondary border border-sandstone/15 flex flex-col h-full overflow-hidden">
               <div className="aspect-[4/5] overflow-hidden bg-canvas relative">
@@ -146,9 +146,9 @@ export default function Home() {
       </section>
 
       {/* 4. Bestsellers Section */}
-      <section className="max-w-[1440px] mx-auto px-6 md:px-[80px] py-[120px]">
-        <div className="flex flex-col md:flex-row items-baseline justify-between mb-[60px]">
-          <div className="text-left mb-6 md:mb-0">
+      <section className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] py-16 md:py-[120px]">
+        <div className="flex flex-col md:flex-row items-baseline justify-between mb-8 md:mb-[60px]">
+          <div className="text-left mb-4 md:mb-0">
             <span className="label-caps mb-3 block text-primary">Atelier Favorites</span>
             <h2 className="font-serif text-3xl md:text-4xl text-dark-surface">The Seasonal Bestsellers</h2>
           </div>
@@ -161,7 +161,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
           {bestsellers.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
@@ -169,8 +169,8 @@ export default function Home() {
       </section>
 
       {/* 5. Trust Badges */}
-      <section className="bg-secondary border-t border-sandstone/20 py-16">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] grid grid-cols-1 md:grid-cols-4 gap-8">
+      <section className="bg-secondary border-t border-sandstone/20 py-10 md:py-16">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           
           <div className="flex flex-col items-center text-center p-4">
             <Compass className="w-8 h-8 text-primary mb-4" />

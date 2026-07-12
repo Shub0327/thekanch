@@ -30,16 +30,18 @@ export default function Header() {
           Complimentary Shipping Across India &bull; Discover The Festive Edit
         </div>
 
-        <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] h-[90px] flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] h-16 md:h-[90px] flex items-center justify-between">
           
           {/* Mobile Menu Button */}
-          <button 
-            onClick={() => setMobileMenuOpen(true)}
-            className="md:hidden text-dark-surface hover:text-primary transition-colors p-2"
-            aria-label="Open menu"
-          >
-            <Menu className="w-5 h-5" />
-          </button>
+          <div className="w-1/3 flex justify-start md:hidden">
+            <button 
+              onClick={() => setMobileMenuOpen(true)}
+              className="text-dark-surface hover:text-primary transition-colors p-2"
+              aria-label="Open menu"
+            >
+              <Menu className="w-5 h-5" />
+            </button>
+          </div>
 
           {/* Desktop Navigation Left */}
           <nav className="hidden md:flex items-center space-x-8 w-1/3">
@@ -67,7 +69,7 @@ export default function Header() {
           </div>
 
           {/* Action Icons Right */}
-          <div className="flex items-center justify-end space-x-6 w-1/3">
+          <div className="flex items-center justify-end space-x-4 md:space-x-6 w-1/3">
             {/* Wishlist Link */}
             <Link 
               to="/collection?filter=wishlist" 
@@ -101,7 +103,7 @@ export default function Header() {
 
       {/* Mobile Drawer Navigation overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-dark-surface/40 backdrop-blur-sm flex justify-start animate-fade-in md:hidden">
+        <div className="fixed inset-0 z-50 bg-canvas/95 backdrop-blur-sm flex justify-start animate-fade-in md:hidden">
           <div className="w-[280px] bg-canvas h-full p-6 flex flex-col justify-between border-r border-sandstone/25">
             <div>
               <div className="flex items-center justify-between mb-12">
