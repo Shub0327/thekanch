@@ -67,24 +67,24 @@ export default function ProductCard({ product }) {
       </div>
 
       {/* Product Metadata Section */}
-      <div className="pt-4 flex flex-col flex-grow text-left">
-        <span className="label-caps text-[9px] mb-1.5 text-primary tracking-[0.2em]">
+      <div className="pt-2 sm:pt-4 flex flex-col flex-grow text-left">
+        <span className="label-caps text-[8px] sm:text-[9px] mb-1 sm:mb-1.5 text-primary tracking-[0.2em]">
           {product.specs.plating} &bull; {product.specs.stones.split(',')[0]}
         </span>
         
         <Link to={`/product/${product.handle}`} className="focus:outline-none">
-          <h3 className="font-serif text-[17px] text-dark-surface group-hover:text-primary transition-colors duration-300 leading-tight mb-2">
+          <h3 className="font-serif text-[13px] sm:text-[17px] text-dark-surface group-hover:text-primary transition-colors duration-300 leading-tight mb-1 sm:mb-2">
             {product.title}
           </h3>
         </Link>
 
         {/* Pricing */}
-        <div className="flex items-center space-x-3 mt-auto">
-          <span className="font-sans text-[15px] font-semibold text-wine">
+        <div className="flex items-center space-x-2 sm:space-x-3 mt-auto">
+          <span className="font-sans text-[13px] sm:text-[15px] font-semibold text-wine">
             {formattedPrice}
           </span>
           {formattedOriginalPrice && (
-            <span className="font-sans text-xs text-dark-surface/40 line-through">
+            <span className="font-sans text-[10px] sm:text-xs text-dark-surface/40 line-through">
               {formattedOriginalPrice}
             </span>
           )}
