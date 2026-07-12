@@ -23,79 +23,81 @@ export default function Header() {
   const inactiveStyle = "text-dark-surface/70 hover:text-primary tracking-caps text-xs uppercase transition-colors duration-300 pb-1 border-b border-transparent";
 
   return (
-    <header className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-md border-b border-sandstone/20">
-      {/* Announcement Bar */}
-      <div className="bg-wine text-secondary text-[10px] tracking-[0.25em] uppercase text-center py-2 px-4 select-none">
-        Complimentary Shipping Across India &bull; Discover The Festive Edit
-      </div>
+    <>
+      <header className="sticky top-0 z-50 bg-canvas/90 backdrop-blur-md border-b border-sandstone/20">
+        {/* Announcement Bar */}
+        <div className="bg-wine text-secondary text-[10px] tracking-[0.25em] uppercase text-center py-2 px-4 select-none">
+          Complimentary Shipping Across India &bull; Discover The Festive Edit
+        </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] h-[90px] flex items-center justify-between">
-        
-        {/* Mobile Menu Button */}
-        <button 
-          onClick={() => setMobileMenuOpen(true)}
-          className="md:hidden text-dark-surface hover:text-primary transition-colors p-2"
-          aria-label="Open menu"
-        >
-          <Menu className="w-5 h-5" />
-        </button>
+        <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] h-[90px] flex items-center justify-between">
+          
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={() => setMobileMenuOpen(true)}
+            className="md:hidden text-dark-surface hover:text-primary transition-colors p-2"
+            aria-label="Open menu"
+          >
+            <Menu className="w-5 h-5" />
+          </button>
 
-        {/* Desktop Navigation Left */}
-        <nav className="hidden md:flex items-center space-x-8 w-1/3">
-          {navLinks.map((link) => (
-            <NavLink 
-              key={link.name} 
-              to={link.path}
-              className={activeStyle}
+          {/* Desktop Navigation Left */}
+          <nav className="hidden md:flex items-center space-x-8 w-1/3">
+            {navLinks.map((link) => (
+              <NavLink 
+                key={link.name} 
+                to={link.path}
+                className={activeStyle}
+              >
+                {link.name}
+              </NavLink>
+            ))}
+          </nav>
+
+          {/* Centered Brand Logo */}
+          <div className="w-1/3 text-center flex justify-center">
+            <Link to="/" className="inline-block group focus:outline-none">
+              <h1 className="font-serif text-2xl md:text-3xl tracking-[0.15em] font-normal uppercase text-dark-surface group-hover:text-primary transition-colors duration-300 leading-none">
+                Kanch
+              </h1>
+              <p className="text-[7px] uppercase tracking-[0.4em] text-dark-surface/50 mt-1.5 leading-none">
+                Digital Atelier
+              </p>
+            </Link>
+          </div>
+
+          {/* Action Icons Right */}
+          <div className="flex items-center justify-end space-x-6 w-1/3">
+            {/* Wishlist Link */}
+            <Link 
+              to="/collection?filter=wishlist" 
+              className="relative p-2 text-dark-surface hover:text-primary transition-colors duration-300"
+              title="Wishlist"
             >
-              {link.name}
-            </NavLink>
-          ))}
-        </nav>
+              <Heart className="w-[18px] h-[18px]" />
+              {wishlistCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 bg-wine text-secondary text-[8px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                  {wishlistCount}
+                </span>
+              )}
+            </Link>
 
-        {/* Centered Brand Logo */}
-        <div className="w-1/3 text-center flex justify-center">
-          <Link to="/" className="inline-block group focus:outline-none">
-            <h1 className="font-serif text-2xl md:text-3xl tracking-[0.15em] font-normal uppercase text-dark-surface group-hover:text-primary transition-colors duration-300 leading-none">
-              Kanch
-            </h1>
-            <p className="text-[7px] uppercase tracking-[0.4em] text-dark-surface/50 mt-1.5 leading-none">
-              Digital Atelier
-            </p>
-          </Link>
+            {/* Cart Trigger */}
+            <Link 
+              to="/cart" 
+              className="relative p-2 text-dark-surface hover:text-primary transition-colors duration-300"
+              title="Cart"
+            >
+              <ShoppingBag className="w-[18px] h-[18px]" />
+              {cartCount > 0 && (
+                <span className="absolute -top-0.5 -right-0.5 bg-primary text-secondary text-[8px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+          </div>
         </div>
-
-        {/* Action Icons Right */}
-        <div className="flex items-center justify-end space-x-6 w-1/3">
-          {/* Wishlist Link */}
-          <Link 
-            to="/collection?filter=wishlist" 
-            className="relative p-2 text-dark-surface hover:text-primary transition-colors duration-300"
-            title="Wishlist"
-          >
-            <Heart className="w-[18px] h-[18px]" />
-            {wishlistCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 bg-wine text-secondary text-[8px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
-                {wishlistCount}
-              </span>
-            )}
-          </Link>
-
-          {/* Cart Trigger */}
-          <Link 
-            to="/cart" 
-            className="relative p-2 text-dark-surface hover:text-primary transition-colors duration-300"
-            title="Cart"
-          >
-            <ShoppingBag className="w-[18px] h-[18px]" />
-            {cartCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 bg-primary text-secondary text-[8px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
-                {cartCount}
-              </span>
-            )}
-          </Link>
-        </div>
-      </div>
+      </header>
 
       {/* Mobile Drawer Navigation overlay */}
       {mobileMenuOpen && (
@@ -166,6 +168,6 @@ export default function Header() {
           />
         </div>
       )}
-    </header>
+    </>
   );
 }
