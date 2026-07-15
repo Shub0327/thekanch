@@ -15,9 +15,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-secondary border-t border-sandstone/30 mt-[120px]">
+    <footer className="bg-secondary border-t border-sandstone/30 mt-16 md:mt-[120px]">
       {/* Brand Ethos & Newsletter Row */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] py-[80px] grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 border-b border-sandstone/25">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] py-10 md:py-[80px] grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24 border-b border-sandstone/25">
         
         {/* Left Column: Brand Ethos */}
         <div>
@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
 
       {/* Directory Links Row */}
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] py-[60px] grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] py-8 md:py-[60px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
         
         {/* boutique location details */}
         <div>
@@ -145,7 +145,7 @@ export default function Footer() {
 
       {/* Copyright row */}
       <div className="bg-canvas border-t border-sandstone/25 py-6">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] flex flex-col md:flex-row items-center justify-between text-[11px] tracking-wider text-dark-surface/50">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] flex flex-col md:flex-row items-center justify-between text-[11px] tracking-wider text-dark-surface/50">
           <p>&copy; {new Date().getFullYear()} Kanch Digital Atelier. All Rights Reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <span className="hover:text-primary cursor-pointer transition-colors">Privacy Policy</span>

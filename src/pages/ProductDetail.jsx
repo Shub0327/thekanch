@@ -98,10 +98,10 @@ export default function ProductDetail() {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] py-[60px] page-fade-in text-left">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] py-8 md:py-[60px] page-fade-in text-left">
       
       {/* Breadcrumbs */}
-      <nav className="text-[10px] uppercase tracking-[0.2em] text-dark-surface/40 mb-12 select-none">
+      <nav className="text-[10px] uppercase tracking-[0.2em] text-dark-surface/40 mb-6 md:mb-12 select-none">
         <Link to="/" className="hover:text-primary transition-colors">Home</Link>
         <span className="mx-2.5">&bull;</span>
         <Link to="/collection" className="hover:text-primary transition-colors">Collection</Link>
@@ -110,7 +110,7 @@ export default function ProductDetail() {
       </nav>
 
       {/* Main Details Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 mb-[120px]">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 mb-16 md:mb-[120px]">
         
         {/* Left Column: Image Gallery (Span 7) */}
         <div className="lg:col-span-7 flex flex-col-reverse md:flex-row gap-6">
@@ -159,7 +159,7 @@ export default function ProductDetail() {
           <div>
             <span className="label-caps mb-3 block text-primary">{product.type} &bull; Handcrafted</span>
             
-            <h2 className="font-serif text-3xl md:text-4xl text-dark-surface font-normal leading-tight mb-4">
+            <h2 className="font-serif text-2xl md:text-4xl text-dark-surface font-normal leading-tight mb-4">
               {product.title}
             </h2>
 
@@ -384,7 +384,7 @@ export default function ProductDetail() {
             <h2 className="font-serif text-2xl md:text-3xl text-dark-surface">Related Creations</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
             {relatedProducts.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}

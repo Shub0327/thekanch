@@ -30,7 +30,7 @@ export default function Header() {
           Complimentary Shipping Across India &bull; Discover The Festive Edit
         </div>
 
-        <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] h-16 md:h-[90px] flex items-center justify-between">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] h-14 md:h-[90px] flex items-center justify-between">
           
           {/* Mobile Menu Button */}
           <div className="w-1/3 flex justify-start md:hidden">

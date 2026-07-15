@@ -57,7 +57,7 @@ export default function Cart() {
 
   if (cartItems.length === 0) {
     return (
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] py-[120px] text-center page-fade-in">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] py-16 md:py-[120px] text-center page-fade-in">
         <div className="flex flex-col items-center max-w-md mx-auto">
           <ShoppingBag className="w-12 h-12 text-primary/40 mb-6" />
           <span className="label-caps mb-3 block text-primary">Your bag is empty</span>
@@ -77,13 +77,13 @@ export default function Cart() {
   }
 
   return (
-    <div className="max-w-[1440px] mx-auto px-6 md:px-[80px] py-[60px] page-fade-in text-left">
-      <div className="border-b border-sandstone/25 pb-8 mb-12">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[80px] py-8 md:py-[60px] page-fade-in text-left">
+      <div className="border-b border-sandstone/25 pb-6 md:pb-8 mb-6 md:mb-12">
         <span className="label-caps mb-2 block text-primary">Shopping Bag</span>
-        <h2 className="font-serif text-3xl md:text-5xl text-dark-surface font-normal">Selected Creations</h2>
+        <h2 className="font-serif text-2xl md:text-5xl text-dark-surface font-normal">Selected Creations</h2>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24">
         {/* Left Column: Cart Items List (Span 7) */}
         <div className="lg:col-span-7 space-y-8 select-none">
           {cartItems.map((item, index) => (
